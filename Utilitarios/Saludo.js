@@ -7,6 +7,8 @@ Saludar=function(){
     let edad=recuperarInt("txtEdad");
     // recuperar el valor de la caja de texto txtAltura
     let altura=recuperarFloat("txtEstatura");
+    let mensajeBienvenido= "Bienvenido "+nombre+" "+apellido;
+    mostrarTexto("lblResultado", mensajeBienvenido);
 }
 
 recuperarInt=function(idcomponente){
@@ -27,4 +29,10 @@ RecuperarTexto=function(idComponente){
     componente=document.getElementById(idComponente);
     valorIngresado=componente.value;
 return valorIngresado
+}
+
+mostrarTexto=function(idComponente, mensaje){
+let componente;
+componente=document.getElementById(idComponente);
+componente.innerText=mensaje;
 }
