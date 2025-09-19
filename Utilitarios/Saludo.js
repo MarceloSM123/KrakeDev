@@ -9,7 +9,9 @@ Saludar=function(){
     let altura=recuperarFloat("txtEstatura");
     let mensajeBienvenido= "Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado", mensajeBienvenido);
-    mostrarImagen("imgSaludo","./imagen/giphy.gif")
+    mostrarImagen("imgSaludo","./imagen/giphy.gif");
+    // vamos alimpiar la caja de texto
+    mostrarTextoEnCaja("txtNombre", "");
 }
 
 recuperarInt=function(idcomponente){
@@ -41,4 +43,10 @@ componente.innerText=mensaje;
 mostrarImagen=function(idComponente, rutaImagen){
     let componente =document.getElementById(idComponente);
     componente.src=rutaImagen;
+}
+
+mostrarTextoEnCaja=function(idComponente, mensaje){
+let componente;
+componente=document.getElementById(idComponente);
+componente.value=mensaje;
 }
