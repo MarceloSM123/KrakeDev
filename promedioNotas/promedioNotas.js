@@ -4,4 +4,9 @@ calcularPromedioNotas=function(){
     let nota3=recuperarFlotante("cmpNota3");
     let promedio=calcularPromedio(nota1,nota2,nota3);
     cambiarTexto("lblpromedio","PROMEDIO: "+promedio.toFixed(2));
+    if(promedio>7){
+cambiarImagen("cmpImagen","./imagen/yagane-gane.gif");
+    }else{
+cambiarImagen("cmpImagen","./imagen/fracaso.gif");
+    }
 }
