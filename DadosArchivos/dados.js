@@ -1,5 +1,6 @@
-jugar=function(){   
-    lanzarDado();
+jugar=function(){ 
+    let valorRecuperado= lanzarDado();
+    cambiarTexto("lblNumero",valorRecuperado);
 }
 // crear una funcion llamada lanzar dados
 //no tiene parametros
@@ -10,5 +11,5 @@ lanzarDado=function(){
     let numeroMultiplicado=aleatorio*6;
     let numeroEntero=parseInt(numeroMultiplicado);
     let valorDado=numeroEntero+1;
-    return valorDado
+    return valorDado;
 }
