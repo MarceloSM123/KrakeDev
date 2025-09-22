@@ -32,7 +32,7 @@ modificarLnzamientos=function(){
 //invocar limpiar
 intentos=intentos-1;
 cambiarTexto("lblIntentos",intentos);
-if(intentos==0){
+if(intentos==0 ){
     cambiarTexto("lblMensaje","GAME OVER");
         limpiar();
 }
