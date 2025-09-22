@@ -1,6 +1,10 @@
 jugar=function(){ 
     let valorRecuperado= lanzarDado();
     cambiarTexto("lblNumero",valorRecuperado);
+    if(valorRecuperado>3){
+        console.log("Es mayor a 3");
+        console.log("Ganaste");
+    }
 }
 // crear una funcion llamada lanzar dados
 //no tiene parametros
@@ -13,3 +17,4 @@ lanzarDado=function(){
     let valorDado=numeroEntero+1;
     return valorDado;
 }
+
