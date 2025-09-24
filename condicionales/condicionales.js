@@ -74,3 +74,32 @@ esDigito=function(caracter){
         return false
     }
 }
+
+darPermiso=function(notasMatematica,notaFisica,notaGeometria){
+    let validacion;
+    if(notasMatematica>90||notaFisica>90||notaGeometria>90){
+        validacion=true;
+    }else
+        {validacion=false;
+
+        }
+    return validacion;
+}
+
+otorgarPermiso=function(notasMatematica,notaFisica,notaGeometria){
+    let validacion;
+    if((notasMatematica>90||notaFisica>90)&& notaGeometria>80){
+        validacion=true;
+    }else{
+        validacion=false;}
+    return validacion;
+}
+
+dejarSalir=function(notasMatematica,notaFisica,notaGeometria){
+    let validacion;
+    if((notasMatematica>90||notaFisica>90||notaGeometria>90) && notaFisica>notasMatematica){
+        validacion=true;
+    }else{
+        validacion=false;}
+    return validacion;
+}
