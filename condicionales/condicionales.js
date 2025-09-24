@@ -66,6 +66,15 @@ esMayuscula=function(caracter){
     }
 }
 
+esMinuscula=function(caracter){
+    let codigo=caracter.charCodeAt(0);
+    if(codigo>=97 && codigo<=122){
+        return true
+    }else{
+        return false
+    }
+}
+
 esDigito=function(caracter){
     let codigo=caracter.charCodeAt(0);
     if(codigo>=48 && codigo<=57){
