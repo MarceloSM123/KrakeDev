@@ -100,8 +100,12 @@ if(isNaN(nota)){
         mostrarTexto(idComponenteError,"DEBE INGRESAR UN NUMERO");
         return false;
     }else{
+       if(nota>=0 && nota<=10){
         mostrarTexto(idComponenteError,"");
         return true;
+       } else {
+        mostrarTexto(idComponenteError,"EL NUMERO DEBE ESTAR ENTRE 0 Y 10");
+       }
     }
 }
 
@@ -116,7 +120,7 @@ calcular = function () {
     nota2 = recuperarFloat("txtNota2");   
     nota3 = recuperarFloat("txtNota3");
    
-    if(esNotaValida(nota1,"lblError1") && esNotaValida(nota2,"lblError2") && esNotaValida(nota3,"lblError3")){
+    if(esNotaValida(nota1,"lblError1") & esNotaValida(nota2,"lblError2") & esNotaValida(nota3,"lblError3")){
          resultado = calcularPromedio(nota1, nota2, nota3);
         resultadoFormato = resultado.toFixed(2);
          mostrarTexto("lblResultado", resultadoFormato);
