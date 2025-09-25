@@ -13,10 +13,20 @@ calcular = function () {
     nota1 = recuperarFloat("txtNota1");
     if(isNaN(nota1)){
         alert("ERROR");
+    } else {
+        nota2 = recuperarFloat("txtNota2");
+        if(isNaN(nota2)){
+          alert("ERROR");  
+        } else{
+            nota3 = recuperarFloat("txtNota3");
+            if(isNaN(nota3)){
+                alert("ERROR");
+            }else{
+                 resultado = calcularPromedio(nota1, nota2, nota3);
+                 resultadoFormato = resultado.toFixed(2);
+                 mostrarTexto("lblResultado", resultadoFormato);
+            }
+        }
     }
-    nota2 = recuperarFloat("txtNota2");
-	nota3 = recuperarFloat("txtNota3");
-    resultado = calcularPromedio(nota1, nota2, nota3);
-    resultadoFormato = resultado.toFixed(2);
-    mostrarTexto("lblResultado", resultadoFormato);
+    
 }
