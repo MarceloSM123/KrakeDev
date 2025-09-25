@@ -40,18 +40,24 @@ calcular = function () {
     let existeError= false;
     nota1 = recuperarFloat("txtNota1");
     if(isNaN(nota1)){
-        alert("ERROR");
         existeError= true;
+        mostrarTexto("lblError1","DEBE INGRESAR UN NUMERO");
+    } else {
+        mostrarTexto("lblError1","");
     }
     nota2 = recuperarFloat("txtNota2");
     if(isNaN(nota2)){
-        alert("ERROR");
         existeError= true;
+        mostrarTexto("lblError2","DEBE INGRESAR UN NUMERO");
+    } else{
+        mostrarTexto("lblError2","");
     }
     nota3 = recuperarFloat("txtNota3");
     if(isNaN(nota3)){
-        alert("ERROR");
         existeError= true;
+        mostrarTexto("lblError3","DEBE INGRESAR UN NUMERO");
+    }else{
+        mostrarTexto("lblError3","");
     }
     if(existeError==false){
          resultado = calcularPromedio(nota1, nota2, nota3);
