@@ -96,18 +96,21 @@ calcular3 = function () {
 }
 
 esNotaValida=function(nota,idComponenteError){
-if(isNaN(nota)){
+    let hayErrores=false;
+    if(isNaN(nota)){
+    
         mostrarTexto(idComponenteError,"DEBE INGRESAR UN NUMERO");
-        return false;
-    }else{
-       if(nota>=0 && nota<=10){
-        mostrarTexto(idComponenteError,"");
-        return true;
-       } else {
-        mostrarTexto(idComponenteError,"EL NUMERO DEBE ESTAR ENTRE 0 Y 10");
-       }
+        hayErrores=true;
     }
-}
+    if (nota<0 || nota>10){
+        mostrarTexto(idComponenteError,"EL NUMERO DEBE ESTAR ENTRE 0 Y 10");
+        hayErrores=true;
+       } 
+    if(hayErrores== false) {
+        mostrarTexto(idComponenteError,"");
+       }
+    return !hayErrores;
+    }
 
 calcular = function () {
     let nota1;
