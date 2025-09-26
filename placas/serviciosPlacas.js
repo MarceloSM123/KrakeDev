@@ -121,3 +121,26 @@ obtenerProvincias=function(placa){
     }
 
 }
+
+obtenerTipoVehiculo=function(placa){
+let letra = placa.charCodeAt(1);
+let vehiculo;
+if(letra==65 || letra==90 || letra==69 || letra==88 || letra==83 || letra==77){
+if(letra==65 || letra==90){
+    return vehiculo="Vehiculo comercial"
+}
+if(letra==69 ){
+    return vehiculo="Vehiculo gubernamental"
+}
+if(letra==88 ){
+    return vehiculo="Vehiculo uso oficial"
+}
+if(letra==83 ){
+    return vehiculo="Vehiculo gobierno provincial"
+}
+if(letra==77 ){
+    return vehiculo="Vehiculo municipal"
+}}else{
+    return vehiculo="Vehiculo particular"
+}
+}
