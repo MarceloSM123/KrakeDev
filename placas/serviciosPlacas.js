@@ -6,7 +6,7 @@ validacion=true;
 }else{
     error="la placa debe tener de 7 u 8"
 }
-if(esMayuscula(placa.charAt(0))&&esMayuscula(placa.charAt(1)) && esMayuscula(placa.charAt(2))){
+if(esMayuscula(placa.charAt(0))&& esMayuscula(placa.charAt(1)) && esMayuscula(placa.charAt(2))){
     validacion=true;
 }else{
     if(esMayuscula(placa.charAt(0))==false){
