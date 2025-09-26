@@ -1,10 +1,11 @@
 validarEstructura=function(placa){
 let validacion=false;
 let error;
-if(placa.length=7 || placa.length=8 ){
+if(placa.length==7 || placa.length==8 ){
 validacion=true;
 }else{
     error="la placa debe tener de 7 u 8"
+    return error;
 }
 if(esMayuscula(placa.charAt(0))&& esMayuscula(placa.charAt(1)) && esMayuscula(placa.charAt(2))){
     validacion=true;
@@ -33,15 +34,16 @@ validacion=true;
     if(esDigito(placa.charAt(4))==false){
         error=error+" , "+"el sexto caracter debe ser un numero"
     }
-    if(esDigito(placa.charAt(4))==false){
+    if(esDigito(placa.charAt(6))==false){
         error=error+" , "+"el septimo caracter debe ser un numero"
     }
 }
 if(validacion==false){
-    error=null;
+   error=null;
     return error;
 }else{
-    return error;
+   return error;
+  
 }
 
 }
