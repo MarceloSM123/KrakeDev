@@ -31,7 +31,7 @@ validacion=true;
     if(esDigito(placa.charAt(4))==false){
         error=error+" , "+"el quinto caracter debe ser un numero"
     }
-    if(esDigito(placa.charAt(4))==false){
+    if(esDigito(placa.charAt(5))==false){
         error=error+" , "+"el sexto caracter debe ser un numero"
     }
     if(esDigito(placa.charAt(6))==false){
