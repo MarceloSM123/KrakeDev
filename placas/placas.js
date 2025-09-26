@@ -4,6 +4,7 @@ validarPlaca=function(){
     let etiqueta1;
     let etiqueta2;
     let erroresEstructura;
+    let provincia;
     componente=document.getElementById("txtPlaca");
     etiqueta1=document.getElementById("lblMensaje1");
     etiqueta2=document.getElementById("lblMensaje2");
@@ -12,9 +13,13 @@ validarPlaca=function(){
     if(erroresEstructura==null){
      etiqueta1.innerText="ESTRUCTURA VALIDA";
      etiqueta2.innerText="";
-     console.log("ESTRUCTURA VALIDA");
+     provincia=obtenerProvincias(mensaje);
+     if(provincia==null){
+        console.log("Provincia incorrecta");
+     }else{
+        console.log(provincia);
+     }
     }else{
-        console.log("ESTRUCTURA INCORRECTA: "+ erroresEstructura);
         etiqueta2.innerText="ESTRUCTURA INCORRECTA: "+ erroresEstructura;
         etiqueta1.innerText="";
     }
