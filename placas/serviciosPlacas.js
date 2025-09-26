@@ -1,6 +1,6 @@
 validarEstructura=function(placa){
 let validacion=false;
-let error;
+let error="";
 if(placa.length==7 || placa.length==8 ){
 validacion=true;
 }else{
@@ -142,5 +142,25 @@ if(letra==77 ){
     return vehiculo="Vehiculo municipal"
 }}else{
     return vehiculo="Vehiculo particular"
+}
+}
+
+obtenerDiaPicoYPlaca=function(placa){
+let letra = placa.charCodeAt(6);
+let dia;
+if(letra==49 || letra==50 ){
+   return dia="Lunes";
+}
+if(letra==51 || letra==52 ){
+    return dia="Martes";
+}
+if(letra==53 || letra==54 ){
+    return dia="Miercoles";
+}
+if(letra==55 || letra==56 ){
+   return dia="Jueves";
+}
+if(letra==57 || letra==48 ){
+    return dia="Viernes";
 }
 }

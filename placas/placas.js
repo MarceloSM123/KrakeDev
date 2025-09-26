@@ -4,18 +4,21 @@ validarPlaca=function(){
     let etiqueta1;
     let etiqueta2;
     let etiqueta3;
-    let etiqueta4
+    let etiqueta4;
+    let etiqueta5;
     let erroresEstructura;
     let provincia;
     let vehiculo;
+    let picoYPlaca;
     componente=document.getElementById("txtPlaca");
     etiqueta1=document.getElementById("lblMensaje1");
     etiqueta2=document.getElementById("lblMensaje2");
     etiqueta3=document.getElementById("lblMensaje3");
     etiqueta4=document.getElementById("lblMensaje4");
+    etiqueta5=document.getElementById("lblMensaje5");
     mensaje=componente.value;
     erroresEstructura = validarEstructura(mensaje);
-    if(erroresEstructura==null){
+    if(erroresEstructura==null || erroresEstructura==""){
      etiqueta1.innerText="ESTRUCTURA VALIDA";
      etiqueta2.innerText="";
      provincia=obtenerProvincias(mensaje);
@@ -29,9 +32,14 @@ validarPlaca=function(){
     vehiculo=obtenerTipoVehiculo(mensaje);
     etiqueta4.innerText= "VEHICULO TIPO: "+vehiculo;
     console.log(vehiculo);
+    picoYPlaca=obtenerDiaPicoYPlaca(mensaje);
+    etiqueta5.innerText= "Pico y placa: "+picoYPlaca;
     }else{
         etiqueta2.innerText="ESTRUCTURA INCORRECTA: "+ erroresEstructura;
         etiqueta1.innerText="";
+        etiqueta3.innerText="";
+        etiqueta4.innerText="";
+        etiqueta5.innerText="";
     }
 
 
