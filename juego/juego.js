@@ -53,6 +53,6 @@ limpiar=function(){
     mostrarTexto("lblResultado","");
     mostrarTexto("lblComputador","PUNTOS COMPUTADOR: 0");
     mostrarTexto("lblJugador","PUNTOS USUARIO: 0");
-    let puntosUsuario=0;
-    let puntosComputador=0;
+    puntosUsuario=0;
+    puntosComputador=0;
 }
