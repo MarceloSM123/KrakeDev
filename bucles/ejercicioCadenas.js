@@ -3,6 +3,22 @@ ejecutarPrueba1=function(){
     mensaje=recuperarTexto("txtCadena");
     recorrerCadena(mensaje);
 }
+ejecutarPrueba2=function(){
+    let mensaje;
+    mensaje=recuperarTexto("txtCadena");
+    invertirCadena(mensaje);
+    mostrarTexto( "lblInvertido",invertirCadena(mensaje));
+}
+invertirCadena=function(cadena){
+let caracter;
+let mensaje="";
+for(let posicion=cadena.length;posicion>=0;posicion--){
+caracter=cadena.charAt(posicion);
+mensaje=mensaje+caracter;
+console.log("Caracter: "+caracter+" posicion "+ posicion);
+}
+return mensaje
+}
 
 recorrerCadena=function(cadena){
 let caracter;
