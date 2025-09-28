@@ -13,3 +13,19 @@ mostrarNumeros1=function(){
     }
     console.log("despues del for");
 }
+
+mostrarPares=function(){
+    console.log("antes del for");
+    for(let x=2;x<=10;x+=2){
+        console.log(x);
+    }
+    console.log("despues del for");
+}
+
+mostrarInverso=function(){
+     console.log("antes del for");
+    for(let i=10;i>=0;i--){
+        console.log(i);
+    }
+    console.log("despues del for");
+}
