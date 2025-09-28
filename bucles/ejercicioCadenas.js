@@ -36,6 +36,8 @@ if(existeLetra==true){
 }
 }
 
+
+
 recorrerCadena=function(cadena){
 let caracter;
 for(let posicion=0;posicion<cadena.length;posicion++){
