@@ -29,3 +29,11 @@ mostrarInverso=function(){
     }
     console.log("despues del for");
 }
+
+hackearNasaPelis=function(){
+    // hackeando nasa 0% ... 100%
+    for(let i=0; i<=100; i+=10){
+        console.log("hackeando nasa "+i+"%");
+    }
+    console.log("La nasa ha sido HACKEADA");
+}
