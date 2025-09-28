@@ -20,6 +20,22 @@ console.log("Caracter: "+caracter+" posicion "+ posicion);
 return mensaje
 }
 
+buscarLetra=function(cadena,letra){
+let letraIterada;
+let existeLetra=false;
+for(let i=0; i<cadena;length, i++){
+letraIterada=cadena.charAt(i);
+if(letraIterada==letra){
+    return true;
+}
+}
+if(existeLetra==true){
+ return true;
+} else{
+    return false;
+}
+}
+
 recorrerCadena=function(cadena){
 let caracter;
 for(let posicion=0;posicion<cadena.length;posicion++){
