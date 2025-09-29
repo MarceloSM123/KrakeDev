@@ -35,6 +35,7 @@ guardarPalabra=function(){
 mostrarLetra=function(letra, posicion){
 if(posicion==0){
     mostrarTexto("div0",letra);
+
 }
 if(posicion==1){
     mostrarTexto("div1",letra);
