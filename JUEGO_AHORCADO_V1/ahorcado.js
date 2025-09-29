@@ -17,7 +17,7 @@ guardarPalabra=function(){
     palabra=recuperarTexto("txtSecreta");
 
     for(let i=0; i<palabra.length;i++){
-       validacion=esMayuscula(palabra.charCodeAt(i));
+       validacion=esMayuscula(palabra.charAt(i));
        if(validacion==true){
         l++;
        }
@@ -25,7 +25,9 @@ guardarPalabra=function(){
     
     if(palabra.length==5 && l==5){
         palabraSecreta=palabra;
-    }else{  
+        console.log(palabraSecreta);}
+        else{
+        
         alert("INGRESE UNA PALABRA DE 5 LETRAS MAYUSCULAS"); 
     }
 }
