@@ -53,10 +53,20 @@ if(posicion==4){
 
 validar=function(letra){
     let letrasEncontradas;
-    for(let i=0;i>=palabraSecreta.length;i++){
+    for(let i=0;i<=palabraSecreta.length;i++){
         if(letra==palabraSecreta.charAt(i)){
             letrasEncontradas++;
             mostrarLetra(letra,i);
         }
+    }
+}
+
+ingresarLetra=function(){
+    let letra;
+    letra=recuperarTexto("txtLetra");
+    if(esMayuscula(letra)==true){
+       validar(letra); 
+    } else{
+        alert("SOLO SE ACEPTAN MAYUSCULAS");
     }
 }
