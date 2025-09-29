@@ -31,3 +31,21 @@ guardarPalabra=function(){
         alert("INGRESE UNA PALABRA DE 5 LETRAS MAYUSCULAS"); 
     }
 }
+
+mostrarLetra=function(letra, posicion){
+if(posicion==0){
+    mostrarTexto("div0",letra);
+}
+if(posicion==1){
+    mostrarTexto("div1",letra);
+}
+if(posicion==2){
+    mostrarTexto("div2",letra);
+}
+if(posicion==3){
+    mostrarTexto("div3",letra);
+}
+if(posicion==4){
+    mostrarTexto("div4",letra);
+}
+}
