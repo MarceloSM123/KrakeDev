@@ -50,3 +50,13 @@ if(posicion==4){
     mostrarTexto("div4",letra);
 }
 }
+
+validar=function(letra){
+    let letrasEncontradas;
+    for(let i=0;i>=palabraSecreta.length;i++){
+        if(letra==palabraSecreta.charAt(i)){
+            letrasEncontradas++;
+            mostrarLetra(letra,i);
+        }
+    }
+}
