@@ -15,3 +15,12 @@ probarAgregar=function(){
     notaRecuperada=recuperarInt("txtNota");
     agregarNotas(notaRecuperada);
 }
+
+recorrerArreglo=function(){
+    let notaR;
+    for(let indice=0; indice<notas.length; indice++){
+        notaR=notas[indice];
+        console.log(notaR);
+    }
+
+}
