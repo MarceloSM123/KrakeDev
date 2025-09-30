@@ -40,3 +40,10 @@ ejecutarPromedio=function(){
     promedio=calculoPromedio();
     mostrarTexto("lblPromedio",promedio);
 }
+
+generarTabla=function(){
+    let contenidoTabla="";
+    let cmpTabla=document.getElementById("divTabla");
+    contenidoTabla+="<table><tr><td>uno</td></tr>"+"<tr><td>dos</td></tr></table>"
+    cmpTabla.innerHTML=contenidoTabla;
+}
