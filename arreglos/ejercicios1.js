@@ -14,6 +14,7 @@ probarAgregar=function(){
     let notaRecuperada;
     notaRecuperada=recuperarInt("txtNota");
     agregarNotas(notaRecuperada);
+    generarTabla();
 }
 
 recorrerArreglo=function(){
@@ -42,8 +43,15 @@ ejecutarPromedio=function(){
 }
 
 generarTabla=function(){
-    let contenidoTabla="";
+    let contenidoTabla="<table> <tr>NOTAS<th> </th></tr>";
     let cmpTabla=document.getElementById("divTabla");
-    contenidoTabla+="<table><tr><td>uno</td></tr>"+"<tr><td>dos</td></tr></table>"
+    let miNota;
+    for(let i=0;i<notas.length;i++){
+        miNota=notas[i];
+        contenidoTabla+="<tr><td>";
+        contenidoTabla+=miNota;
+        contenidoTabla+="</tr></td>"
+    }
+    contenidoTabla+="</table>"
     cmpTabla.innerHTML=contenidoTabla;
 }
