@@ -24,3 +24,19 @@ recorrerArreglo=function(){
     }
 
 }
+
+calculoPromedio=function(){
+    let sumarNotas=0;
+    let promedio;
+    for(let i=0;i<notas.length;i++){
+        sumarNotas=sumarNotas+notas[i];
+    }
+    promedio=sumarNotas/(notas.length);
+    return promedio;
+}
+
+ejecutarPromedio=function(){
+    let promedio;
+    promedio=calculoPromedio();
+    mostrarTexto("lblPromedio",promedio);
+}
