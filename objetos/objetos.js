@@ -1,3 +1,28 @@
+crearProductos=function(){
+    let producto1={
+        nombre:"TURBONEITOR",
+        Precio:100.50,
+        stock:200,
+
+    }
+    let producto2={
+        nombre:"LAPTOP",
+        Precio:1500.0,
+        stock:100,
+    }
+    console.log(producto1.nombre);
+    console.log(producto2.Precio);
+    if(producto1.stock != producto2.stock){
+        if(producto1.stock>producto2.stock){
+            console.log("Producto1 tiene mayor stock");
+        }else{
+            console.log("Producto2 tiene mayor stock");
+        }
+    }else{
+        console.log("Ambos productos tienen el mismo stock");
+    }
+}
+
 probarAtributos=function(){
     let persona={
         nombre: "Marcelo",
