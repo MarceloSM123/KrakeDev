@@ -60,3 +60,38 @@ crearCliente=function(){
     cliente1.nombre="Maria"//añade el atributo y su valor al objeto vacio
     cliente1.nom="lcos"//añade el atributo nom y su vaor al objeto
 }
+incrementarSaldo=function(cuenta,monto){// un objeto con atributo saldo al que le sumamos el monto
+cuenta.saldo+=monto;
+}
+
+determinarMayor=function(persona1,persona2){//comparacion entre los atributos edad de dos objetos
+if(persona1.edad<persona2.edad){
+    return persona1;
+}else if (persona2.edad<persona1.edad){
+    return persona2;
+}else{
+    return null;
+}
+}
+
+probarIncrementoSaldo=function(){
+    let cta={
+        saldo: 34.0,
+        nombre: "Marcelo",
+    };
+    incrementarSaldo(cta,20);
+}
+
+probarDeterminarMayor=function(){
+    let persona1={
+        edad:25,
+        nombre:"Tatiana",
+    }
+    let persona2={
+        edad:33,
+        nombre:"Karen"
+    }
+    let l=determinarMayor(persona1,persona2);// recibe objetos con los parametros contenidos en la funcion
+    // analizar el tipo de dato que retorna una funcion
+    console.log(l.nombre);
+}
