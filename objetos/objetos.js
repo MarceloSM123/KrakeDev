@@ -44,7 +44,19 @@ modificarAtributos=function(){
         numero:"1231231312",
         saldo:0.0,
     }
-    cuenta.saldo=100;
+    cuenta.saldo=100;// modificacion de atributos del objeto
     cuenta.saldo+=10
     console.log(cuenta.saldo);
+}
+
+crearCliente=function(){
+    let cliente={
+        cedula:"123123123",
+        nombre: "juan",
+    }
+    cliente.nombre="marcelo"// modifica el atributo del objeto
+    cliente.nom="hola"// añade el atributo nom y le asigna hola
+    let cliente1={}//es un objeto sin atributos
+    cliente1.nombre="Maria"//añade el atributo y su valor al objeto vacio
+    cliente1.nom="lcos"//añade el atributo nom y su vaor al objeto
 }
