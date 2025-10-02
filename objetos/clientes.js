@@ -65,3 +65,24 @@ ejecutarBusqueda=function(){
         mostrarTextoEnCaja("txtEdad",respuesta.edad);
     }
 }
+
+modificarCliente=function(cliente){
+let clienteEncontrado=buscarCliente(cliente.cedula);
+    if(clienteEncontrado!=null){
+        clienteEncontrado.nombre=cliente.nombre;
+        clienteEncontrado.edad=cliente.edad;
+    }
+}
+
+guardarCambios=function(){
+    let valorCedula=recuperarTexto("txtCedula");
+    let valorNombre=recuperarTexto("txtNombre");
+    let valorEdad=recuperarTexto("txtEdad");
+    let datosCliente={};
+    datosCliente.cedula=valorCedula;
+    datosCliente.nombre=valorNombre;
+    datosCliente.edad=parseInt(valorEdad);
+    modificarCliente(datosCliente);
+    mostrarClientes();
+
+}
