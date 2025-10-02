@@ -38,3 +38,13 @@ probarAtributos=function(){
         console.log("si esta vivo");
     }
 }
+
+modificarAtributos=function(){
+    let cuenta={
+        numero:"1231231312",
+        saldo:0.0,
+    }
+    cuenta.saldo=100;
+    cuenta.saldo+=10
+    console.log(cuenta.saldo);
+}
