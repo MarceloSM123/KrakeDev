@@ -18,4 +18,38 @@ mostrarClientes=function(){
     contenidoTabla+="</table>";
     cmptable=document.getElementById("mostrarTabla");
     cmptable.innerHTML=contenidoTabla;
-}        
+}     
+
+buscarCliente=function(cedula){
+    let elementoCliente;
+    let clienteEncontrado=null;
+    for(let i=0;i<clientes.length;i++){
+        elementoCliente=clientes[i];
+        if(elementoCliente.cedula==cedula){
+            clienteEncontrado=elementoCliente;
+            break;
+        }
+    }
+    return clienteEncontrado;
+}
+
+agregarCliente=function(cliente){
+    let resultado;
+    resultado=buscarCliente(cliente.cedula);
+    if(resultado==null){
+        clientes.push(cliente);
+    }else{
+        alert("ya existe el cliente con la cedula: "+cliente.cedula);
+    }
+}
+
+crearCliente=function(){
+    let valorCedula=recuperarTexto("txtCedula");
+    let valorNombre=recuperarTexto("txtNombre");
+    let valorEdad=recuperarTexto("txtEdad");
+    let nuevoCliente={};
+    nuevoCliente.cedula=valorCedula;
+    nuevoCliente.nombre=valorNombre;
+    nuevoCliente.edad=parseInt(valorEdad);
+    agregarCliente(nuevoCliente);
+}

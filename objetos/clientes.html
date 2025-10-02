@@ -2,9 +2,17 @@
 <html>
     <head>
         <script src="clientes.js"></script>
+        <script src="utilitarios.js"></script>
     </head>
     <body>
+        <h5>CEDULA</h5>
+        <input type="text" id="txtCedula"/>
+        <h5>NOMBRE</h5>
+        <input type="text" id="txtNombre"/>
+        <h5>EDAD</h5>
+        <input type="text" id="txtEdad"/>
         <input type="button" value="TABLA" onclick="mostrarClientes();"/>
+        <input type="button" value="AGREGAR" onclick="crearCliente();"/>
         <div id="mostrarTabla"></div>
     </body>
 </html>
