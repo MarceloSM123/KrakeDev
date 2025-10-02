@@ -53,3 +53,15 @@ crearCliente=function(){
     nuevoCliente.edad=parseInt(valorEdad);
     agregarCliente(nuevoCliente);
 }
+
+ejecutarBusqueda=function(){
+    let valorCedula=recuperarTexto("txtCedulaBusqueda");
+    let respuesta=buscarCliente(valorCedula); 
+    if(respuesta==null){
+        alert("Cliente no encontrado");
+    }else{
+        mostrarTextoEnCaja("txtCedula",respuesta.cedula);
+        mostrarTextoEnCaja("txtNombre",respuesta.nombre);
+        mostrarTextoEnCaja("txtEdad",respuesta.edad);
+    }
+}
