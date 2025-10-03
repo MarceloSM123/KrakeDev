@@ -99,6 +99,21 @@ tbody tr:nth-child(odd) {
   }
   .areaTabla{
     margin-top: 20px;
+    table {
+            width: 100%;
+            border-collapse: collapse;
+            color:#f8f8f8;
+        }
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: center;
+            color:#ffffff;
+        }
+        th {
+            background-color: #000000;
+            color:#ffffff
+        }
   }
 .estiloBoton:hover {
     background-color:white; 
