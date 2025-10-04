@@ -98,6 +98,7 @@ guardar=function(){
             mostrarTexto( "lblErrorCedula","UNICAMENTE INGRESE NUMEROS");
         }else{
             cedula=valorCedula;
+            mostrarTexto( "lblErrorCedula","");
         }
     }else{
         mostrarTexto( "lblErrorCedula","INGRESE UNICAMENTE 10 DIGITOS");
@@ -113,6 +114,7 @@ guardar=function(){
         }
         if(validacion==true){
             nombre=valorNombre;
+             mostrarTexto( "lblErrorNombre","");
         }
     }else{
         mostrarTexto( "lblErrorNombre","INGRESE 3 MAYUSCULAS O MAS");
@@ -129,6 +131,7 @@ guardar=function(){
         }
         if(validacion1==true){
             apellido=valorApellido;
+            mostrarTexto( "lblErrorApellido","");
         }
     }else{
         mostrarTexto( "lblErrorApellido","INGRESE 3 MAYUSCULAS O MAS");
@@ -136,6 +139,7 @@ guardar=function(){
 
     if(valorSueldo>=400 && valorSueldo<=5000){
         sueldo=valorSueldo;
+        mostrarTexto( "lblErrorSueldo","");
     }else{
         mostrarTexto( "lblErrorSueldo","INGRESE VALORES ENTRE 400 Y 5000");
     }
@@ -155,9 +159,18 @@ guardar=function(){
         }else{
             alert("EMPLEADO GUARDADO CORRECTAMENTE");
             mostrarEmpleados();
+            deshabilitarComponentes();
         }
         }
         
     }
 
+}
+
+deshabilitarComponentes=function(){
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
 }
