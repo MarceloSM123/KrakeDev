@@ -61,3 +61,103 @@ ejecutarNuevo=function(){
     habilitarComponente("btnGuardar");
 }
 
+buscarEmpleado=function(cedula){
+    let objetoEmpleado;
+    for(let i=0; i<empleados.length;i++){
+        objetoEmpleado=empleados[i];
+        if(objetoEmpleado.cedula==cedula){
+            return objetoEmpleado;
+            break;}
+    }
+    if(objetoEmpleado!={}){
+        return null
+    }
+
+}
+
+agregarEmpleado=function(objetoEmpleado){
+if(buscarEmpleado(objetoEmpleado)!=null){
+    return false
+}else{
+    empleados.push(objetoEmpleado);
+    return true
+}
+}
+
+guardar=function(){
+    let valorCedula=recuperarTexto("txtCedula");
+    let cedula="";//cedula nombre apellido sueldo
+    let valorNombre=recuperarTexto("txtNombre");
+    let nombre="";
+    let valorApellido=recuperarTexto("txtApellido");
+    let apellido="";
+    let valorSueldo=recuperarFloat("txtSueldo");
+    let sueldo=0.0;
+    if(valorCedula.length==10){
+        if(isNaN(parseInt(valorCedula))){
+            mostrarTexto( "lblErrorCedula","UNICAMENTE INGRESE NUMEROS");
+        }else{
+            cedula=valorCedula;
+        }
+    }else{
+        mostrarTexto( "lblErrorCedula","INGRESE UNICAMENTE 10 DIGITOS");
+    }
+    if(valorNombre.length>=3){
+        let validacion=true;
+        for(let i=0;i<valorNombre.length;i++){
+            validacion=esMayuscula(valorNombre.charAt(i));
+           if( esMayuscula(valorNombre.charAt(i))==false){
+            mostrarTexto( "lblErrorNombre","INGRESE SOLO MAYUSCULAS");
+           }
+           
+        }
+        if(validacion==true){
+            nombre=valorNombre;
+        }
+    }else{
+        mostrarTexto( "lblErrorNombre","INGRESE 3 MAYUSCULAS O MAS");
+    }
+
+    if(valorApellido.length>=3){
+        let validacion1=true;
+        for(let i=0;i<valorApellido.length;i++){
+            validacion=esMayuscula(valorApellido.charAt(i));
+           if( esMayuscula(valorApellido.charAt(i))==false){
+            mostrarTexto( "lblErrorApellido","INGRESE SOLO MAYUSCULAS");
+           }
+           
+        }
+        if(validacion1==true){
+            apellido=valorApellido;
+        }
+    }else{
+        mostrarTexto( "lblErrorApellido","INGRESE 3 MAYUSCULAS O MAS");
+    }
+
+    if(valorSueldo>=400 && valorSueldo<=5000){
+        sueldo=valorSueldo;
+    }else{
+        mostrarTexto( "lblErrorSueldo","INGRESE VALORES ENTRE 400 Y 5000");
+    }
+
+    if(cedula!="" && nombre!="" && apellido!="" && sueldo!=0.0){
+        if(esNuevo==true){
+            let nuevo={};
+            let respuesta;
+        
+            nuevo.cedula=cedula;
+            nuevo.nombre=nombre;
+            nuevo.apellido=apellido;
+            nuevo.sueldo=sueldo;
+        respuesta=agregarEmpleado(nuevo);
+        if(respuesta==false){
+            alert("YA EXISTE UN EMPLEADO CON LA CEDULA: "+cedula);
+        }else{
+            alert("EMPLEADO GUARDADO CORRECTAMENTE");
+            mostrarEmpleados();
+        }
+        }
+        
+    }
+
+}
