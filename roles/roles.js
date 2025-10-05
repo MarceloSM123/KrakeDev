@@ -199,3 +199,12 @@ ejecutarBusqueda=function(){
         habilitarComponente("txtSueldo");
     }
 }
+
+limpiar=function(){
+        mostrarTextoEnCaja("txtCedula","");
+        mostrarTextoEnCaja("txtNombre","");
+        mostrarTextoEnCaja("txtApellido","");
+        mostrarTextoEnCaja("txtSueldo","");
+        esNuevo=false;
+        deshabilitarComponentes();
+}
