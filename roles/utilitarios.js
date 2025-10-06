@@ -79,3 +79,9 @@ esMayuscula=function(caracter){
         return false
     }
 }
+
+mostrarTextoDIV=function(idComponente,mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.textContent = mensaje;
+}
