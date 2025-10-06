@@ -29,6 +29,26 @@ recuperarInt = function(idComponente){
    return valorEntero;
 }
 
+recuperarIntDiv = function(idComponente){
+   let valorCaja= recuperarTextoDiv(idComponente);
+   let valorEntero = parseInt(valorCaja);
+   return valorEntero;
+}
+
+recuperarTextoDiv=function(idComponente){
+     let componente;
+    let valorIngresado;
+    componente=document.getElementById(idComponente);
+    valorIngresado=componente.textContent;
+    return valorIngresado;
+}
+
+recuperarFloatDiv = function(idComponente){
+    let valorCaja= recuperarTextoDiv(idComponente);
+    let valorFlotante = parseFloat(valorCaja);
+    return valorFlotante;
+ }
+
 recuperarFloat = function(idComponente){
     let valorCaja= recuperarTexto(idComponente);
     let valorFlotante = parseFloat(valorCaja);
