@@ -299,7 +299,7 @@ guardarRol=function(){
     rol.sueldo=sueldo;
     rol.valorAPagar=valorPagar;
     rol.aporteEmpleado=valorIess;
-    rol.aporteEmpleador=aporte.toFixed(2);
+    rol.aporteEmpleador=aporte;
     agregarRol(rol);
     if(rolLongitud<rol.length){
     alert("EL USUARIO FUE INGRESADO EXITOSAMENTE");}
@@ -324,6 +324,7 @@ mostrarRoles=function(){
 }
 
 mostrarTotales=function(){
+    let totalNomina;
     let totalEmpleado=0;
     let totalEmpleador=0;
     let totalAPagar=0;
@@ -337,5 +338,6 @@ mostrarTotales=function(){
     mostrarTextoDIV("infoTotalPago",totalAPagar);
     mostrarTextoDIV("infoAporteEmpresa",totalEmpleador);
     mostrarTextoDIV("infoAporteEmpleado",totalEmpleado);
-
+    totalNomina=totalEmpleado+totalAPagar+totalEmpleador;
+    mostrarTextoDIV("infoNOMINA",totalNomina);
 }
