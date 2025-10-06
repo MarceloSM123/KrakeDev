@@ -24,12 +24,16 @@ mostrarOpcionRol=function(){
     ocultarComponente("divEmpleado");
     ocultarComponente("divResumen"); //"guardarRol" lin 171 html
     deshabilitarComponente("guardarRol");
+  //  mostrarRoles();
+   // mostrarTotales();// PENDIENTE DE APROVACION
 }
 
 mostrarOpcionResumen=function(){
     mostrarComponente("divResumen");
     ocultarComponente("divEmpleado");
     ocultarComponente("divRol");
+    mostrarRoles();// PENDIENTES
+    mostrarTotales();// PENDIENTES
 }
 
 mostrarEmpleados=function(){
@@ -289,15 +293,49 @@ guardarRol=function(){
     let nombre=recuperarTextoDiv("infoNombre");
     let cedula=recuperarTextoDiv("infoCedula");
     let sueldo=recuperarTextoDiv("infoSueldo");
-    let aporte=calcularAporteEmpleador(parseFloat(sueldo));
+    let aporte=calcularAporteEmpleador(parseFloat(sueldo).toFixed(2));
     rol.cedula=cedula;
     rol.nombre=nombre;
     rol.sueldo=sueldo;
     rol.valorAPagar=valorPagar;
     rol.aporteEmpleado=valorIess;
-    rol.aporteEmpleador=aporte;
+    rol.aporteEmpleador=aporte.toFixed(2);
     agregarRol(rol);
     if(rolLongitud<rol.length){
     alert("EL USUARIO FUE INGRESADO EXITOSAMENTE");}
     deshabilitarComponente("guardarRol");
+}
+
+mostrarRoles=function(){
+    let tabla="<table><tr><th> CEDULA </th><th> NOMBRE </th><th> VALOR A PAGAR </th><th> APORTE EMPLEADO </th><th>APORTE EMPLEADOR</th></tr>";
+    let objetoRol;
+    let cmpTabla=document.getElementById("tablaResumen");
+    for(let i=0; i<roles.length;i++){
+        objetoRol=roles[i];
+        tabla+="<tr><td>"+objetoRol.cedula+
+        "</td><td>"+objetoRol.nombre+
+        "</td><td>"+objetoRol.valorAPagar+
+        "</td><td>"+objetoRol.aporteEmpleado+
+        "</td><td>"+objetoRol.aporteEmpleador+
+        "</td></tr>"
+    }
+    tabla+="</table>";//"tablaResumen"
+    cmpTabla.innerHTML=tabla;
+}
+
+mostrarTotales=function(){
+    let totalEmpleado=0;
+    let totalEmpleador=0;
+    let totalAPagar=0;
+    let objetosEmpleados;
+    for(let i=0;i<roles.length;i++){
+        objetosEmpleados=roles[i];
+        totalAPagar+=objetosEmpleados.valorAPagar;
+        totalEmpleador+=objetosEmpleados.aporteEmpleador;
+        totalEmpleado+=objetosEmpleados.aporteEmpleado;
+    }
+    mostrarTextoDIV("infoTotalPago",totalAPagar);
+    mostrarTextoDIV("infoAporteEmpresa",totalEmpleador);
+    mostrarTextoDIV("infoAporteEmpleado",totalEmpleado);
+
 }
