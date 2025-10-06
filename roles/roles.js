@@ -208,3 +208,16 @@ limpiar=function(){
         esNuevo=false;
         deshabilitarComponentes();
 }
+
+buscarPorRol=function(){
+    let valorCaja=recuperarTexto("txtBusquedaCedulaRol");
+    let empleado=buscarEmpleado(valorCaja);
+    if(empleado!=null){
+        mostrarTexto("infoNombre",empleado.nombre+" "+empleado.apellido);
+        mostrarTexto("infoSueldo",empleado.sueldo);
+        mostrarTexto("infoCedula",empleado.cedula);
+    }else(alert("EL EMPLEADO NO EXISTE")
+
+    )
+
+}
