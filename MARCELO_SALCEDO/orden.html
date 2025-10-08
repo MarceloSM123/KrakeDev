@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <link rel="stylesheet" href="notas.css" /> 
+    <script src="orden.js"></script>
+    <script src="utilitarios.js"></script>
+    <body onload="mostrarPersonas();">
+    <div class="principal">
+
+
+        <div class="contenido">
+            <div class="titulo">
+                RETO 54
+            </div>
+
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    NOMBRE:
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtNota1"/>
+                    <div class="error" id="lblError1"></div>
+                </div>
+            </div>
+           
+            <div class="ingresoDatos">
+                <div class="tituloCampo">
+                    EDAD
+                </div>
+                <div>
+                    <input type="text" class="cajaTexto" id="txtNota2"/>
+                    <div class="error" id="lblError2"></div>
+                </div>
+            </div>
+           
+            <div class="botones">
+                <div class="contenedorBoton">
+                    <input type="button" value="GUARDAR"
+                     class="estiloBoton" onclick="agregarPersona();" />
+                </div>
+                  <div class="contenedorBoton">
+                    <input type="button" value="ENCONTRAR MAYOR"
+                     class="estiloBoton" onclick="determinarMayor();" />
+                </div>
+                </div>
+                  <div class="contenedorBoton">
+                    <input type="button" value="ENCONTRAR MENOR"
+                     class="estiloBoton" onclick="determinarMenor();" />
+                </div>
+             </div>
+        </div>
+       <div class="areaResultado">
+            <div class="resultado">
+                <div>
+                    PERSONA MAYOR:
+                </div>
+                <div id="lblResultado">
+                    0.0
+                </div>
+                 <div>
+                    PERSONA MENOR:
+                </div>
+                <div id="lblResultadoMenor">
+                    0.0
+                </div>
+
+                <div id="divTabla">
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+
+</html>
