@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.principal {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.menu {
+    
+    background-color: #2d6a4f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contenedorLogo {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    
+}
+
+.contenedorLogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedorBotones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.boton {
+    background-color: white;
+    color: #2d6a4f;
+   
+    padding: 12px;
+  
+    font-weight: 600;
+}
+
+
+
+.contenedorInfoGrupo {
+    margin-top: auto;
+    padding: 20px 0;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    
+}
+
+.contenido {
+    width: 80%;
+    padding: 30px;
+    background-color: #10458a;
+   
+}
+
+.superior, .inferior {
+    background-color: white;
+    border-radius: 24px;
+    padding: 30px;
+   
+    border: 1px solid rgba(45, 106, 79, 0.15);
+}
+
+
+
+.titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0f3b2c;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #2d6a4f;
+    padding-bottom: 10px;
+}
+
+.contenedorTexto {
+    margin-bottom: 20px;
+}
+
+.etiquetaTexto {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1e3a34;
+    margin-bottom: 8px;
+}
+
+.cajaTexto {
+    width: 100%;
+}
+
+.caja {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+
+.error-msg {
+    color: #c42e2e;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: 500;
+    background: #ffeaea;
+    padding: 6px 12px;
+}
+
+.contenedorAcciones {
+    display: flex;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+
+.contenedorAcciones input[type="button"] {
+    background: #2d6a4f;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+
+
+.btn-secundario {
+    background: #f4f7fb !important;
+    color: #1e3a34 !important;
+    border: 2px solid #b3cfc2 !important;
+    
+}
+
+.btn-peligro {
+    background: #b13e3e !important;
+    border-color: #8a2f2f !important;
+}
+
+
+.contenedorInfo {
+    background: hsl(213, 68%, 45%);
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
+}
+
+th {
+    background-color: #19a063;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #dae2ed;
+}
+
+
+
+
+
+
+
+.nota-pequeña {
+    font-size: 0.85rem;
+    color: #3f5a50;
+    margin-top: 15px;
+}

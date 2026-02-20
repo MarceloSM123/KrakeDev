@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro Básico de Estudiantes · Generación 5</title>
+    <link rel="stylesheet" href="estudiantes.css">
+    <script src="utilitarios.js"></script>
+    <script src="estudiantes.js"></script>
+</head>
+
+<body onload="cargar(); mostrarEstudiantes();">
+    <div class="principal">
+
+        <div class="menu">
+            <div class="contenedorLogo">
+              
+            </div>
+            <div class="contenedorBotones">
+                <input type="button" value="REGISTRO" class="boton" onclick="mostrarComponente('divRegistro'); ocultarComponente('divLista'); ocultarComponente('divEliminar');" />
+                <input type="button" value="VER LISTA" class="boton" onclick="mostrarComponente('divLista'); ocultarComponente('divRegistro'); ocultarComponente('divEliminar'); mostrarEstudiantes();" />
+                <input type="button" value="ELIMINAR" class="boton" onclick="mostrarComponente('divEliminar'); ocultarComponente('divRegistro'); ocultarComponente('divLista');" />
+            </div>
+            <div class="contenedorInfoGrupo">
+
+            </div>
+        </div>
+
+
+        <div class="contenido">
+            <div class="superior" id="divRegistro">
+                <div class="titulo">REGISTRO DE ESTUDIANTES</div>
+
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NOMBRE COMPLETO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="nombreInput" onkeyup="limpiarErrorNombre();" placeholder="Ej: Ana López" />
+                    </div>
+                    <div id="errorNombre" class="error-msg"></div>
+                </div>
+
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">CORREO ELECTRÓNICO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="correoInput" onkeyup="limpiarErrorCorreo();" placeholder="ejemplo@correo.com" />
+                    </div>
+                    <div id="errorCorreo" class="error-msg"></div>
+                </div>
+
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">ID (solo números)</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="idInput" onkeyup="limpiarErrorId();" placeholder="123456789" />
+                    </div>
+                    <div id="errorId" class="error-msg"></div>
+                </div>
+
+                <div class="contenedorAcciones">
+                    <input type="button" value="GUARDAR ESTUDIANTE" id="guardarBtn" onclick="guardar();" />
+                    <input type="button" value="LIMPIAR CAMPOS" id="limpiarFormBtn" class="btn-secundario" onclick="limpiarFormulario();" />
+                </div>
+
+                <div class="contenedorInfo">
+                    * Si el ID ya existe, se actualizarán nombre y correo.
+                </div>
+            </div>
+            <div class="inferior" id="divLista" style="display: none;">
+                <div class="titulo">LISTA DE ESTUDIANTES</div>
+                
+                <div class="contenedorAcciones" style="margin-bottom: 20px;">
+                    <input type="button" value="ACTUALIZAR LISTA" onclick="mostrarEstudiantes();" />
+                </div>
+                
+                <div id="tablaEstudiantes" class="tabla-contenedor">
+                </div>
+            </div>
+            <div class="inferior" id="divEliminar" style="display: none;">
+                <div class="titulo">ELIMINAR ESTUDIANTE POR ID</div>
+
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">ID DEL ESTUDIANTE A ELIMINAR</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="eliminarIdInput" onkeyup="limpiarErrorEliminar();" placeholder="Ej: 1001" />
+                    </div>
+                    <div id="errorEliminar" class="error-msg"></div>
+                </div>
+
+                <div class="contenedorAcciones">
+                    <input type="button" value="ELIMINAR ESTUDIANTE" class="btn-peligro" id="eliminarBtn" onclick="eliminarEstudiantePorId();" />
+                </div>
+
+                <div id="mensajeGlobal" class="contenedorInfo">
+                    Ingresa un ID y presiona Eliminar.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
